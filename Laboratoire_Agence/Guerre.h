@@ -4,7 +4,8 @@
 class Guerre : public Vaisseau
 {
 public:
-	Guerre();
+	//Guerre();
+	Guerre(Faction* _faction);
 	~Guerre();
 
 	virtual std::string to_string();

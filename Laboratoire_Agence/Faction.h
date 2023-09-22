@@ -3,22 +3,23 @@
 using std::string;
 
 
+
+
 class Faction
 {
-protected:
+public:
 	int attaque;
 	int defense;
 	int vie;
 	int capacite;
-	std::string nom;
+	std::string nomFaction;
 
 public:
 	Faction();
 
-	Faction(int attaque, int defense, int vie, int capacite);
+	Faction(int attaque, int defense, int vie, int capacite,string nom);
 
+	virtual std::string to_string();
 	~Faction();
-
-	string getNom();
 };
 

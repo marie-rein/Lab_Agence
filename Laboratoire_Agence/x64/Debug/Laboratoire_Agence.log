@@ -1,8 +1,2 @@
-﻿  Faction.cpp
-  Guerre.cpp
-  Laboratoire_Agence.cpp
-  Livraison.cpp
-  Transport.cpp
-  Vaisseau.cpp
-  Génération de code en cours...
+﻿  FactoryVaisseau.cpp
   Laboratoire_Agence.vcxproj -> C:\Users\2233488\Documents\Code\JeuxVideo\Lab_Agence\Laboratoire_Agence\x64\Debug\Laboratoire_Agence.exe

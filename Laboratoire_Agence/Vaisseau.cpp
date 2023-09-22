@@ -7,13 +7,28 @@ Vaisseau::Vaisseau(string nom, int attaque, int defense, int vie, int capacite, 
 	this->attaque = attaque;
 	this->defense = defense;
 	this->vie = vie;
-	this->capacite = capacite;
+	this->capacite = capacite + maFaction->attaque;
 	this->niveau = niveau;
 	this->exp = exp;
 }
 
 
+Vaisseau::Vaisseau()
+{
+	attaque = 0;
+	defense = 0;
+	vie = 0;
+	capacite = 0;
+	niveau = 0;
+	exp = 0;
+	this->maFaction =maFaction;
+}
 
+Vaisseau::Vaisseau(Faction* _faction)
+{
+	maFaction = _faction;
+	this->nom = nom;
+}
 
 Vaisseau::~Vaisseau() {}
 
@@ -27,6 +42,7 @@ string Vaisseau::to_string()
 	infoVaisseau.append("capacite du vaisseau : " + std::to_string(capacite) + "\n");
 	infoVaisseau.append("niveau du vaisseau : " + std::to_string(niveau) + "\n");
 	infoVaisseau.append("exp du vaisseau : " + std::to_string(exp) + "\n");
+	infoVaisseau.append("Type Faction : " + maFaction->nomFaction + +"\n");
 
 	return infoVaisseau;
 }

@@ -3,34 +3,59 @@
 
 #include <iostream>
 #include "Vaisseau.h"
-#include "Guerre.h"
-#include "Livraison.h"
-#include "Transport.h"
+//#include "Guerre.h"
+//#include "Livraison.h"
+//#include "Transport.h"
+#include "FactoryVaisseau.h"
+#include "Station.h"
+
+using std::endl;
 
 int main()
 {
+    srand(time(NULL));
+    //Partie 1
     // Creation vaisseau transport
 
-    Transport* monTransport = new Transport();
-    std::cout << monTransport->to_string();
-    delete monTransport;
+    //Transport* monTransport = new Transport();
+    //std::cout << monTransport->to_string();
+    //delete monTransport;
 
-    std::cout << "\n";
+    //std::cout << "\n";
 
-    // Creation vaisseau de livraison
+    //// Creation vaisseau de livraison
 
-    Livraison* maLivraison = new Livraison();
-    std::cout << maLivraison->to_string();
-    delete maLivraison;
+    //Livraison* maLivraison = new Livraison();
+    //std::cout << maLivraison->to_string();
+    //delete maLivraison;
 
-    std::cout << "\n";
+    //std::cout << "\n";
 
-    //Creation vaisseau de guerre
+    ////Creation vaisseau de guerre
 
-    Guerre* laGuerre = new Guerre();
-    std::cout << laGuerre->to_string();
-    delete laGuerre;
+    //Guerre* laGuerre = new Guerre();
+    //std::cout << laGuerre->to_string();
+    //delete laGuerre;
 
+    //Partie 2
+    
+   /* 
+    std::cout << "------------------ PRODUCTION D'UN VAISSEAU --------------" << endl;
+    Vaisseau* monVaisseau = FactoryVaisseau::getRandomVaisseau();
+    std::cout << monVaisseau->to_string();
+    delete monVaisseau;*/
+
+    //Partie 3
+
+    Station* station = new Station();
+   
+     station->init();
+     station->AfficherVaisseau();
+     delete station;
+
+
+
+    
    
 }
 

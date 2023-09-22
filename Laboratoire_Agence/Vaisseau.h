@@ -7,6 +7,9 @@ class Vaisseau
 {
 
 protected:
+	Faction* maFaction;
+
+protected:
 	int attaque;
 	int defense;
 	int vie;
@@ -14,25 +17,27 @@ protected:
 	std::string nom;
 	int niveau;
 	int exp;
-
+	
 
 public:
 
 	Vaisseau(std::string nom, int attaque, int defense, int vie, int capacite, int niveau, int exp);
+	Vaisseau(Faction* _faction);
+	Vaisseau();
 	~Vaisseau();
 
 	int getAtt() 
 	{
-		return attaque;
+		return attaque + maFaction->attaque;
 	}
 
 	int getDef() 
 	{
-		return defense;
+		return defense + maFaction->defense;
 	}
 	int getVie() 
 	{
-		return vie;
+		return vie + maFaction->vie;
 	}
 
 
