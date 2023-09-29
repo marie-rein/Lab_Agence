@@ -8,6 +8,7 @@
 //#include "Transport.h"
 #include "FactoryVaisseau.h"
 #include "Station.h"
+#include "Mission.h"
 
 using std::endl;
 
@@ -50,8 +51,16 @@ int main()
     Station* station = new Station();
    
      station->init();
-     station->AfficherVaisseau();
+     //station->AfficherVaisseau();
+
+    // Mission* mission = new Mission();
+
+     station->AjouterMission(); 
+     //mission->AfficherVaisseauChoisi();
+     
+
      delete station;
+     //delete mission;
 
 
 

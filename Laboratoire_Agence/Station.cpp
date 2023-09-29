@@ -6,6 +6,7 @@ Station::Station()
 {
 	platnumDisponible = 0;
 	vieStation = 0;
+	
 };
 
 Station::~Station() {}; 
@@ -18,6 +19,19 @@ Station::~Station() {};
 		
 	}
 }
+
+ void Station::AjouterMission()
+ {
+	 mission.SetRequirent(vecVaisseau);
+ }
+
+ /*void Station::AfficherMissionVaisseau()
+ {
+	 if (mission.getEtat())
+	 {
+		 std::cout << "Vaisseau Choisi est : " + vecVaisseau->to_string();
+	 }
+ }*/
 
 vector<Vaisseau*> Station::getVaisseauDispo() 
 {

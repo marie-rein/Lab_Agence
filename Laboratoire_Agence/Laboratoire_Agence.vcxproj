@@ -132,6 +132,7 @@
     <ClCompile Include="Guerre.cpp" />
     <ClCompile Include="Laboratoire_Agence.cpp" />
     <ClCompile Include="Livraison.cpp" />
+    <ClCompile Include="Mission.cpp" />
     <ClCompile Include="Station.cpp" />
     <ClCompile Include="Transport.cpp" />
     <ClCompile Include="Vaisseau.cpp" />
@@ -141,6 +142,7 @@
     <ClInclude Include="FactoryVaisseau.h" />
     <ClInclude Include="Guerre.h" />
     <ClInclude Include="Livraison.h" />
+    <ClInclude Include="Mission.h" />
     <ClInclude Include="Station.h" />
     <ClInclude Include="Transport.h" />
     <ClInclude Include="Vaisseau.h" />
