@@ -22,6 +22,7 @@ Vaisseau::Vaisseau()
 	niveau = 0;
 	exp = 0;
 	this->maFaction =maFaction;
+	bonus = 0;
 }
 
 Vaisseau::Vaisseau(Faction* _faction)

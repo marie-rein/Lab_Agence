@@ -23,8 +23,11 @@ public :
 
 	  void init();
 	  void AjouterMission();
-	  void AfficherMissionVaisseau();
+	  int AfficherMissionVaisseau();
+	  bool PreparerMission();
+	  void EnvoieEnMission();
 
+	  int getVieStation();
 	 void ajouterVaisseau(Vaisseau* vaisseau);
 
 	 virtual std::string to_string();

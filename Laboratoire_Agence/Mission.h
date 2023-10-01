@@ -12,7 +12,6 @@ private:
 	int defenseMission;
 	int vieMission;
 	bool etatMission;
-	
 	//Station station;
 
 
@@ -27,6 +26,8 @@ public:
 	inline int genererNombre(int min, int max);
 
 	bool getEtat();
+
+	
 	virtual std::string to_string();
 
 	~Mission();

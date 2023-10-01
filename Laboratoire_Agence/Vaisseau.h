@@ -5,7 +5,7 @@ using std::string;
 
 class Vaisseau
 {
-
+	const int points_Bonus = 100;
 protected:
 	Faction* maFaction;
 
@@ -17,6 +17,7 @@ protected:
 	std::string nom;
 	int niveau;
 	int exp;
+	int bonus;
 	
 
 public:
@@ -29,6 +30,10 @@ public:
 	int getAtt() 
 	{
 		return attaque + maFaction->attaque;
+	}
+	int getBonus()
+	{
+		return bonus + 100;
 	}
 
 	int getDef() 

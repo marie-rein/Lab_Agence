@@ -14,6 +14,7 @@ using std::endl;
 
 int main()
 {
+    
     srand(time(NULL));
     //Partie 1
     // Creation vaisseau transport
@@ -55,7 +56,12 @@ int main()
 
     // Mission* mission = new Mission();
 
-     station->AjouterMission(); 
+     //station->AjouterMission(); 
+     
+     station->EnvoieEnMission();
+     
+     std::cout << "La vie de la station est :" + std::to_string(station->getVieStation());
+     std::cout << "\n";
      //mission->AfficherVaisseauChoisi();
      
 

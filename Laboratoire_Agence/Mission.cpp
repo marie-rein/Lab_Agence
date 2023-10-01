@@ -12,29 +12,29 @@ Mission::Mission(int attaque, int defense, int vie, bool etat)
 	etatMission = etat;
 }
 
+/// <summary>
+/// Definie les criteres des vaisseaux recherchés
+/// </summary>
+/// <param name="vaisseau"></param>
 void Mission::SetRequirent(vector<Vaisseau*> vaisseau)
 {
 	attaqueMission = genererNombre(30, 100);
 	defenseMission = genererNombre(20, 80);
 	vieMission = genererNombre(1, 5);
 
-	//vaisseau = station.getVaisseauDispo();
 
 	for (int i = 0; i < vaisseau.size(); i++)
 	{
 		if (((vaisseau[i]->getAtt() >= attaqueMission) && (vaisseau[i]->getDef()) >= defenseMission) && (vaisseau[i]->getVie() >= vieMission))
 		{
 			etatMission = true;
-			//std::cout << "Vaisseau Choisi est : " + vaisseau[i]->to_string();
 			
 		}
 		else
 		{
-			std::cout << "Vaisseau non compatible : "  "\n";
+			etatMission = false;
 		}
 	}
-	
-	//return vaisseau;
 }
 
 inline int Mission::genererNombre(int min, int max)
@@ -48,14 +48,6 @@ bool Mission::getEtat()
 	return etatMission;
 }
 
-//void Mission::AfficherVaisseauChoisi()
-//{	
-//	
-//	for (int i = 0; i < vaisseau.size(); i++)
-//	{
-//		std::cout << vaisseau[i]->to_string();
-//	}
-//}
 
 string Mission::to_string()
 {
